@@ -1,0 +1,418 @@
+Anotações-Curso-Git-Github
+
+
+Falar é fácil, me mostre o código.
+ Linus Torvalds
+
+
+Git foi criado pelo Linus Torvalds
+ e o criador por trás do Linux, o Git é um software, com diversas versões, criado em 2005, o Git é um sistema de versionamento de código distribuído.
+
+O software é feito de forma colaborativa,
+ inclusive o Linux.
+
+O Github é um repositório, uma
+ espécie de rede social, que trará reconhecimento, é também uma empresa da Microsoft.
+
+
+Gui x Cli
+
+
+O que vamos
+ aprender?
+
+
+
+1. Mudar de pastas
+
+
+
+
+2. Listar as pastas
+
+
+
+
+3. Criar pastas/arquivos
+
+
+
+
+4. Deletar pastas/arquivos
+
+
+
+Comandos básicos
+
+Windows                Unix    
+
+cd                       cd     1.            cd.. retroceder
+
+dir                       ls    2.
+
+mkdir                  mkdir    3.
+
+del / rmdir           rm -rf    4.       S / Q 
+
+
+cls                      clear                  limpar 
+
+                          ctrl+l
+
+tab                                            completar
+
+echo                                            printar
+
+del e o nome da pasta                           deletar
+
+seta para cima                                 navegar no histórico
+
+  
+
+
+Pelo terminal digitar: cmd
+
+Pasta padrão do windows
+
+
+
+
+Instalação do Git
+
+
+
+https://git-scm.com/
+
+
+
+
+Funcionamento do Git
+
+
+
+SHA1
+
+Objetos fundamentais
+
+Sistema distribuído
+
+Segurança
+
+
+A sigla SHA significa Secure Hash
+ Algorithm (Algoritmo de Hash Seguro), é um conjunto de funções hash criptográficas projetada pela NSA (Agência de Segurança Nacional dos EUA).
+
+A encriptação gera um conjunto
+ de caracteres identificador de 40 dígitos. É único e serve como identificação. É uma forma curta de representar um arquivo.
+
+
+
+echo “olá mundo” / openssl sha1
+
+
+
+
+>(stdin)= f9fc856e559b950175f2b7cd7dad61facbe58e7b
+
+
+
+Git Bash
+
+Thema - botão direito-option
+
+
+Gera uma chave de 40 caracteres
+ a cada modificação.
+
+
+Garantir e identificar que sofreu
+ alteração.
+
+
+
+
+Objetos internos do Git
+
+
+
+1º Objeto Blobs - Tipo/tramanho
+ do objeto/ metadados \0
+
+Trees armazenam Blobs \0 - e trees
+
+Commits aponta para uma tree,
+ parente, autor, mensagem, timestamp
+
+
+
+
+Chaves SSH e tokens
+
+
+
+Comandos para criar chave SSH
+
+
+ssh-keygen -t ed25519 -C “email”
+
+eval $ (ssh-agent -s)
+
+
+ssh add id_ed25519
+
+
+git clone
+
+
+
+
+
+Primeiros comandos com Git
+
+
+
+Iniciar o Git
+
+Iniciar o versionamento
+
+Criar um commit
+
+
+git init [iniciar]
+
+git add [mover arquivos]
+
+git commit [criar primeiro commit]
+
+
+Criando um repositório
+
+
+
+criar uma pasta workspace no diretório C
+
+
+
+
+git bash here clicando com o botão direito
+
+
+
+
+ls para listar e verificar se temos a pasta workspace
+
+
+
+
+cd workspace enter
+
+
+
+
+ctrl+l para limpar
+
+
+
+
+mkdir livro-receitas 
+
+
+
+
+ls
+
+
+
+
+cd livro-receitas
+
+
+
+
+git init 
+
+
+
+
+ls .git pasta oculta
+
+
+
+
+ls -a mostra a pasta oculta
+
+
+
+
+cd .git 
+
+
+
+
+ls
+
+
+
+
+config
+
+
+
+
+cd..
+
+
+
+
+ctrl+l
+
+
+
+
+git config –global user.email “email”
+
+
+
+
+git config –global user.name Eleicul
+
+
+
+Adicionando um arquivo
+
+Markdown navegador html
+
+Editor de texto Typora, ou VsCode,
+ ou Typedown
+
+criar uma pasta strogonoff.md
+
+
+no typora
+
+# Strogonoff de frango enter
+
+**Negrito** _itálico_
+
+
+git add *
+
+git commit -m “commit inicial”
+
+
+
+
+Passo a passo clico de vida
+
+
+
+
+git status
+
+mkdir receitas
+
+ls
+
+mv strogonoff.md ./receitas
+
+ls
+
+receitas strogonogg.md
+
+cd receitas
+
+ls 
+
+receitas
+
+git status
+
+
+deleted: strogonoff.md
+
+
+git add strogonoff.md receitas/
+
+
+git status
+
+
+git commit -m “cria pasta receitas,
+ move arquivo para receitas
+
+git status
+
+ls
+
+echo > README.md
+
+ls
+
+git status
+
+
+editar no typora escolher o arquivo
+ README.md
+
+
+# Livro de receitas: coo
+
+
+Olá! Bem vindo ao meu livro de
+ receitas
+
+  - strogonoff de camarão
+
+
+git status
+
+git add * 
+
+ls
+
+git status
+
+git commit -m “adiciona index”
+
+
+Github
+
+git config –list
+
+git config –global –unset user.email
+
+git config –global –unset user.nickname
+
+git config –list
+
+git config –global user.email
+ “email”
+
+git config –global user.nickname
+ “Eleicul”
+
+git config –list
+
+
+depois de criar um repositório
+ no github
+
+
+ls
+
+README.md receitas/
+
+git remote add origin [link do
+ github]
+
+git remote -v
+
+git status
+
+git push origin master
+
+ inserir credenciais
+
+
+
+​
